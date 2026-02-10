@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πορσελάνινα Είδη | Ethereal</title>
+    <meta name="description" content="Χειροποίητα αρωματικά κεριά σόγιας σε μοναδικά σχέδια.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Ethereal</a>
+        <ul class="nav-links">
+            <li><a href="index.html#gallery">Συλλογή</a></li>
+            <li><a href="index.html#services">Υπηρεσίες</a></li>
+            <li><a href="index.html#contact" class="btn-nav">Επικοινωνία</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <header class="category-header fade-in-up">
+        <h1>Πορσελάνινα Είδη</h1>
+        <p>Μοναδικά κομμάτια πορσελάνης</p>
+    </header>
+
+    <!-- Product Grid -->
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Product Placeholder 1 -->
+                <div class="card fade-in-on-scroll">
+                    <div class="card-image">
+                        <img src="assets/category_porcelain_items_new.jpg" alt="Κερί">
+                    </div>
+                </div>
+                <!-- Product Placeholder 2 -->
+                <div class="card fade-in-on-scroll">
+                    <div class="card-image">
+                        <img src="assets/category_porcelain_items_new.jpg" alt="Κερί">
+                    </div>
+                </div>
+                <!-- Product Placeholder 3 -->
+                <div class="card fade-in-on-scroll">
+                    <div class="card-image">
+                        <img src="assets/category_porcelain_items_new.jpg" alt="Κερί">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Ethereal</h2>
+                <p>Handmade with Love</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Επικοινωνία</h3>
+                <p>Ενδιαφέρεστε για τα προϊόντα μας; Επικοινωνήστε μαζί μας:</p>
+                <div class="contact-buttons">
+                    <a href="mailto:info@ethereal.gr" class="btn-outline">Email Us</a>
+                    <a href="tel:+302101234567" class="btn-outline">Call Us</a>
+                </div>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ethereal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+
+</html>
