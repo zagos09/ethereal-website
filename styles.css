@@ -271,7 +271,7 @@ h2.section-title::after {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.6s ease;
 }
 
@@ -571,6 +571,7 @@ h2.section-title::after {
     color: var(--text-light);
     font-style: italic;
 }
+
 /* Subtle Texture Overlay */
 body::before {
     content: "";
@@ -584,4 +585,107 @@ body::before {
     opacity: 0.4;
     pointer-events: none;
     z-index: -1;
+}
+
+/* Category Generic Header Style for Backgrounds */
+.category-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff !important;
+    /* Force white text */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    /* Stronger shadow */
+    padding: 8rem 5% 6rem;
+    overflow: hidden;
+}
+
+.category-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    /* Dark overlay for contrast */
+    z-index: 1;
+}
+
+.category-header h1,
+.category-header p {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+}
+
+/* Specific Background Classes */
+.bg-candles {
+    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_candles_category_1770743582142.png');
+}
+
+.bg-wax-melts {
+    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_wax_melts_category_1770743596791.png');
+}
+
+.bg-favors {
+    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_favors_category_1770743633928.png');
+}
+
+.bg-porcelain-wax {
+    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_porcelain_wax_category_1770743647877.png');
+}
+
+/* Fallbacks for Missing Images */
+.bg-porcelain-items {
+    background-image: url('assets/background_porcelain_items.jpg');
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.bg-porcelain-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    display: block !important;
+}
+
+.bg-porcelain-items h1,
+.bg-porcelain-items p {
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+
+.bg-aromatics {
+    background-image: url('assets/background_aromatics.jpg');
+    color: #fff !important;
+    /* Force white text */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    /* Stronger shadow */
+}
+
+.bg-aromatics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    /* Dark overlay for contrast */
+    z-index: 1;
+    display: block !important;
+}
+
+.bg-aromatics h1,
+.bg-aromatics p {
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
 }
