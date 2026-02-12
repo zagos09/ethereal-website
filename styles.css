@@ -622,19 +622,19 @@ body::before {
 
 /* Specific Background Classes */
 .bg-candles {
-    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_candles_category_1770743582142.png');
+    background-image: url('assets/bg-candles.png');
 }
 
 .bg-wax-melts {
-    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_wax_melts_category_1770743596791.png');
+    background-image: url('assets/bg-wax-melts.png');
 }
 
 .bg-favors {
-    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_favors_category_1770743633928.png');
+    background-image: url('assets/bg-favors.png');
 }
 
 .bg-porcelain-wax {
-    background-image: url('/home/kostis/.gemini/antigravity/brain/e5be2bd8-ad48-45e0-93e2-1b3eab71724c/background_porcelain_wax_category_1770743647877.png');
+    background-image: url('assets/bg-porcelain-wax.png');
 }
 
 /* Fallbacks for Missing Images */
